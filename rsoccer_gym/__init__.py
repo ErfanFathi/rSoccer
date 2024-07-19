@@ -37,6 +37,12 @@ register(id='SSLGoToBallIR-v0',
          max_episode_steps=1200
          )
 
+register(id='SSLGoToBallIR2-v0',
+        entry_point='rsoccer_gym.ssl.ssl_go_to_ball:SSLGoToBallIREnv2',
+        kwargs={'field_type': 2, 'n_robots_yellow': 2},
+        max_episode_steps=1200
+        )
+
 register(id='SSLGoToBallShoot-v0',
          entry_point='rsoccer_gym.ssl.ssl_go_to_ball_shoot:SSLGoToBallShootEnv',
          kwargs={'field_type': 2, 'random_init': True,
